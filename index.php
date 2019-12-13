@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <title>APLIKASI PERPUSTAKAAN</title>
+      <title>Perpustakaan - Main Menu</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
-      <script type="text/javascript" src="../js/bootstrap.js"></script>
-      <link href="../css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-      <link href="../css/sb-admin.css" rel="stylesheet">
+      <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <link href="css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+      <link href="css/sb-admin.css" rel="stylesheet">
     </head>
     <body>
       <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
