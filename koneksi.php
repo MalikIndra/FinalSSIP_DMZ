@@ -6,6 +6,6 @@ $database = "perpustakaan";
 
 $conn = mysqli_connect($server,$username,$password,$database);
 if(!$conn){
-    echo ("gagal");
+    echo ("koneksi gagal");
 }
 ?>
