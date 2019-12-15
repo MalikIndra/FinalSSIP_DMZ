@@ -1,2 +1,2 @@
 # FinalSSIP_DMZ
-Final Group for SSIP bt DMZ
+Final Project Group for SSIP by DMZ
