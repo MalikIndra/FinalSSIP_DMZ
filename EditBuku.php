@@ -11,7 +11,7 @@ $result = mysqli_fetch_array($data_edit);
         <body>
             <h2>Edit Data Buku</h2>
             <a href="index.php" style = "padding:0.4% 0.8%;background-color:#009900;color:#fff;border-radius:2px;text-decoration:none;">Home</a>
-            <a href="DataBuku.php" style ="padding:0.4% 0.8%;background-color:#009900;color:#fff;border-radius:2px;text-decoration:none;">Data Siswa</a>
+            <a href="DataBuku.php" style ="padding:0.4% 0.8%;background-color:#009900;color:#fff;border-radius:2px;text-decoration:none;">Data Buku</a>
             <br>
             <br>
             <table>
