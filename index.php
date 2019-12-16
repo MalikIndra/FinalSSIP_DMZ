@@ -52,7 +52,38 @@
                           <i class="fas fa-fw fa-table"></i>
                           <span>Data Buku</span></a>
                   </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link" data-toggle="modal" data-target="#modalLogout">
+                          <i class="fas fa-fw fa-chart-area"></i>
+                          <span>Logout</span>
+                      </a>
+                  </li>
               </ul>
+
+              <div class="modal fade" id="modalLogout" tabindex="-1" role="dialog" aria-labelledby="modalLogoutLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Logout</h5>
+                    </div>
+                    <div class="modal-body">
+                      Apakah anda yakin ingin logout?
+                    </div>
+                    <div class="modal-footer">
+                      <form action="index.php" method="post">
+                        <button class="btn btn-info" name="logout">Logout</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Batal</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <?php
+                if(isset($_POST['logout'])){
+                  echo "<script>window.location.href='login.php'</script>";
+                }
+              ?>
 
               <div id="content-wrapper">
                   <div class="container-fluid">
@@ -129,5 +160,9 @@
                       </footer>
                   </div>
               </div>
+
+              
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
 </body>
 </html>
