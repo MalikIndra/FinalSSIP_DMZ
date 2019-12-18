@@ -82,6 +82,8 @@
 
               <?php
                 if(isset($_POST['logout'])){
+                  include 'koneksi.php';
+                  $q = mysqli_query($conn, "update session set login='' where id='1'");
                   echo "<script>window.location.href='login.php'</script>";
                 }
               ?>
