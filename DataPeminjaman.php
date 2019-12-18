@@ -113,20 +113,21 @@
                             </thead>
                             <?php
                                 include 'koneksi.php';
-                                $select = mysqli_query($conn,"SELECT peminjaman.id_peminjaman, siswa.Nama_Siswa, siswa.Kelas, peminjaman.judul_buku, peminjaman.tgl_pinjam, peminjaman.tgl_dikembalikan
+                                $select = mysqli_query($conn,"SELECT peminjaman.id_peminjaman, siswa.Nama_Siswa, siswa.Kelas, buku.Judul_Buku, peminjaman.tgl_pinjam, peminjaman.tgl_dikembalikan
                                 FROM peminjaman
-                                INNER JOIN siswa ON peminjaman.nama_siswa=siswa.Nama_siswa order by id_peminjaman asc;");
+                                INNER JOIN siswa ON peminjaman.nama_siswa=siswa.Nama_siswa 
+                                INNER JOIN buku ON peminjaman.judul_buku=buku.ID_Buku order by id_peminjaman asc;");
                                 while ($hasil = mysqli_fetch_array($select)){
                             ?>
                             <tr>
                                 <td><?php echo $hasil['id_peminjaman']; ?></td>
                                 <td><?php echo $hasil['Nama_Siswa']; ?></td>
                                 <td><?php echo $hasil['Kelas']; ?></td>
-                                <td><?php echo $hasil['judul_buku']; ?></td>
+                                <td><?php echo $hasil['Judul_Buku']; ?></td>
                                 <td><?php echo $hasil['tgl_pinjam']; ?></td>
                                 <td><?php echo $hasil['tgl_dikembalikan']; ?></td>
                                 <td>
-                                <button class="btn btn-danger text-center" data-toggle="modal" data-target="#modalDelete<?php echo $hasil['id_siswa'];?>">Delete</button>
+                                <button class="btn btn-danger text-center" data-toggle="modal" data-target="#modalDelete<?php echo $hasil['id_peminjaman'];?>">Delete</button>
                                 <?php if($hasil['tgl_dikembalikan']==""){?><button class="btn btn-warning text-center" data-toggle="modal" data-target="#modalEdit<?php echo $hasil['id_peminjaman'];?>">Kembali</button><?php } ?>
                                 </td>
                             </tr>
@@ -222,7 +223,7 @@
                                                 <?php 
                                                     $qBuku=mysqli_query($conn, "select * from buku");
                                                     while($buku = mysqli_fetch_array($qBuku)){?>
-                                                    <option value="<?php echo $buku['Judul_Buku'];?>"><?php echo $buku['Judul_Buku'];?></option>
+                                                    <option value="<?php echo $buku['ID_Buku'];?>"><?php echo $buku['Judul_Buku'];?></option>
                                                     <?php } ?>
                                             </select>
                                         </div>
