@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <link rel="icon" href="iconheader/indexicon.jpg">
       <title>Perpustakaan - Main Menu</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,7 +49,7 @@
                           <span>Data Peminjaman</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="DataBuku.php">
                           <i class="fas fa-fw fa-table"></i>
                           <span>Data Buku</span></a>
                   </li>
@@ -93,9 +94,9 @@
                           </li>
                           <li class="breadcrumb-item active">Halaman Utama</li>
                       </ol>
-                      <h1 class="display-1">SELAMAT DATANG</h1>
+                      <h1 class="display-1">ANNYEONG!</h1>
                       <hr>
-                        <div class="container ml-1">Buku adalah Jembatan Ilmu <br><br></div>  
+                        <div class="container ml-1">Lebih baik terjebak di perpustakaan bersama kamu daripada merasa sendirian di kantin.<br><br></div>  
                         
                         <div class="row ml-1">
                           <div class="col-xl-3 col-sm-6 mb-3">
@@ -140,7 +141,7 @@
                                 </div>
                                 <div class="mr-5">Data Buku</div>
                               </div>
-                              <a class="card-footer text-white clearfix small z-1" href="#">
+                              <a class="card-footer text-white clearfix small z-1" href="DataBuku.php">
                                 <span class="float-left">View Details</span>
                                 <span class="float-right">
                                   <i class="fas fa-angle-right"></i>
