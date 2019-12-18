@@ -40,8 +40,10 @@
           <button class="btn btn-primary btn-block" name="login">Login</button>
         </form>
         <?php
+            include 'koneksi.php';
             if(isset($_POST['login'])){
                 if($_POST['username'] == "admin" && $_POST['password'] == "admin"){
+                    $q=mysqli_query($conn, "update session set login='test' where id='1'");
                     header("location:index.php");
                 }else{?><br>    
                     <div class="alert alert-danger alert-dismissble fade show text-center">Wrong Username/Password.
