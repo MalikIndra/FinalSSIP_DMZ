@@ -11,6 +11,13 @@
       <link href="css/sb-admin.css" rel="stylesheet">
     </head>
     <body>
+    <?php
+      include 'koneksi.php';
+      $a=mysqli_query($conn, "select * from session where id='1'");
+      $valid=mysqli_fetch_array($a);
+      if($valid['login']==""){
+        echo "<script>window.location.href='login.php'</script>";
+      }?>
       <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
               <a class="navbar-brand mr-1" href="index.php">Perpustakaan</a>
               <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
