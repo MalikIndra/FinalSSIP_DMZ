@@ -52,7 +52,7 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Buku</span></a>
             </li>
-            <li class="nav-item">
+         <li class="nav-item">
                 <a href="#" class="nav-link" data-toggle="modal" data-target="#modalLogout">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Logout</span>
@@ -81,10 +81,11 @@
 
         <?php
         if(isset($_POST['logout'])){
+            include 'koneksi.php';
+            $q=mysqli_query($conn, "update session set login='' where id='1'");
             echo "<script>window.location.href='login.php'</script>";
         }
         ?>
-        
 
         <div id="content-wrapper">
             <div class="container-fluid">
@@ -135,10 +136,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <form action="DataBuku.php" method="get" id="edit">
-                                        <div class="">
-                                            <label></label>
-                                            <input type="hidden" class="form-control" name="IdBuku" value = "<?php echo $hasil['ID_Buku'] ?>">
-                                        </div>
+                                        <input type="hidden" class="form-control" name="IdBuku" value = "<?php echo $hasil['ID_Buku'] ?>">
 
                                         <div class="form-group">
                                             <label>Judul Buku</label>
