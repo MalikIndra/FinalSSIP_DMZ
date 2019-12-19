@@ -142,7 +142,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Kelas</label>
-                                                        <select class="form-control" name="Kelas" value="<?php echo $hasil['Kelas']; ?>"required>
+                                                        <select class="form-control" name="Kelas"required>
                                                             <option value="">-Pilih Kelas</option>
                                                             <option <?php echo ($hasil['Kelas'] == "Information System")?"selected":"";?> value="Information System">Information System</option>
                                                             <option <?php echo ($hasil['Kelas'] == "Management")?"selected":"";?> value="Management">Management</option>
