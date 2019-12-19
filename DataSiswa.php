@@ -142,11 +142,22 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Kelas</label>
-                                                        <input type="text" class="form-control" name="Kelas" value="<?php echo $hasil['Kelas']?>">
+                                                        <select class="form-control" name="Kelas" value="<?php echo $hasil['Kelas']; ?>"required>
+                                                            <option value="">-Pilih Kelas</option>
+                                                            <option <?php echo ($hasil['Kelas'] == "Information System")?"selected":"";?> value="Information System">Information System</option>
+                                                            <option <?php echo ($hasil['Kelas'] == "Management")?"selected":"";?> value="Management">Management</option>
+                                                            <option <?php echo ($hasil['Kelas'] == "International Relation")?"selected":"";?> value="International Relation">International Relation</option>
+                                                            <option <?php echo ($hasil['Kelas'] == "Communication")?"selected":"";?> value="Communication">Communication</option>
+                                                            <option <?php echo ($hasil['Kelas'] == "Accounting")?"selected":"";?> value="Accounting">Accounting</option>
+                                                        </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Jenis Kelamin</label>
-                                                        <input type="text" class="form-control" name="JenisKelamin" value="<?php echo $hasil['Jenis_Kelamin']?>">
+                                                       <select class="form-control" name="JenisKelamin" required>
+                                                            <option value="">-Pilih Jenis Kelamin</option>
+                                                            <option <?php echo ($hasil['Jenis_Kelamin'] == "Laki Laki")?"selected":"";?> value="Laki Laki">-Laki-Laki</option>
+                                                            <option <?php echo ($hasil['Jenis_Kelamin'] == "Perempuan")?"selected":"";?> value="Perempuan">-Perempuan-</option>
+                                                        </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Alamat</label>
